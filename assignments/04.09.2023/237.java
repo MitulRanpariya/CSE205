@@ -1,13 +1,7 @@
 class Solution {
-    public void deleteNode(ListNode node) {
-       ListNode current  = node.next;
-      while(current!=null){
-          if(current.next==null){
-            return;
-          }
-          node.val = current.next.val;
-          current = current.next;
-      }
-       
-    }
+  public void deleteNode(ListNode node) {
+    node.val = node.next.val;
+    node.next = node.next.next;
+
+  }
 }
